@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <h2>Nutrition Results</h2>
+
+    <div class="result-top">
+      <div class="img-wrap">
+        <h4 class="img-title">Uploaded Image</h4>
+        <img src="{{ image_url }}" alt="uploaded" />
+      </div>
+
+      <div class="img-wrap">
+        <h4 class="img-title">Detected Image</h4>
+        <img src="{{ detected_url }}" alt="detected" />
+      </div>
+
+      <div class="totals">
+        <h3>Totals</h3>
+        <ul>
+          <li>Weight: {{ totals.weight_g }} g</li>
+          <li>Calories: {{ totals.calories }}</li>
+          <li>Protein: {{ totals.protein }} g</li>
+          <li>Fat: {{ totals.fat }} g</li>
+          <li>Carbs: {{ totals.carbs }} g</li>
+          <li>Iron: {{ totals.iron }} mg</li>
+          <li>Fiber: {{ totals.fiber }} g</li>
+          <li>Zinc: {{ totals.zinc }} mg</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Detected items</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Food</th><th>Weight (g)</th><th>Calories</th><th>Protein</th>
+          <th>Fat</th><th>Carbs</th><th>Iron</th><th>Fiber</th><th>Zinc</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if summary %}
+          {% for row in summary %}
+            <tr>
+              <td>{{ row.food_class }}</td>
+              <td>{{ row.weight_g }}</td>
+              <td>{{ row.calories }}</td>
+              <td>{{ row.protein }}</td>
+              <td>{{ row.fat }}</td>
+              <td>{{ row.carbs }}</td>
+              <td>{{ row.iron }}</td>
+              <td>{{ row.fiber }}</td>
+              <td>{{ row.zinc }}</td>
+            </tr>
+          {% endfor %}
+        {% else %}
+          <tr><td colspan="9">No items detected.</td></tr>
+        {% endif %}
+      </tbody>
+    </table>
+
+    <div class="choice-row" style="margin-top:20px;">
+      <a class="btn-min" href="{{ url_for('track') }}">Analyze another</a>
+      <a class="btn-min" href="{{ url_for('choice') }}">Home</a>
+    </div>
+  </div>
+{% endblock %}

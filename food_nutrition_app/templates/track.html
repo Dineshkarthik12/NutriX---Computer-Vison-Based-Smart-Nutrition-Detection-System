@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <h2>Track Nutrition</h2>
+    {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+    <form method="post" enctype="multipart/form-data">
+      <label>Upload food plate image (jpg/png)</label>
+      <input type="file" name="food_image" accept="image/*" required>
+      <div class="row">
+        <button class="btn-primary" type="submit">Upload & Estimate</button>
+        <a class="btn-min" href="{{ url_for('choice') }}">Back</a>
+      </div>
+    </form>
+  </div>
+{% endblock %}

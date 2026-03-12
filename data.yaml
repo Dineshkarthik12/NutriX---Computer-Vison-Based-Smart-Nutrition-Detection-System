@@ -1,0 +1,6 @@
+train: E:\Smart_Nutrition_Detection\Dataset\train
+val: E:\Smart_Nutrition_Detection\Dataset\valid
+test: E:\Smart_Nutrition_Detection\Dataset\test
+
+nc: 31
+names: ['appam', 'beetroot poriyal', 'boiled egg', 'carrot poriyal', 'chicken 65', 'chicken briyani', 'dosa', 'idly', 'kaara chutney', 'kali', 'koozh', 'lemon satham', 'medu vadai', 'mushroom briyani', 'mutton briyani', 'nandu masala', 'nei satham', 'paal kolukattai', 'paneer briyani', 'paneer masala', 'parupu vadai', 'pidi kolukattai', 'poorna kolukattai', 'prawn thokku', 'puthina chutney', 'sambar', 'sambar satham', 'satham', 'thengai chutney', 'veg briyani', 'ven pongal']

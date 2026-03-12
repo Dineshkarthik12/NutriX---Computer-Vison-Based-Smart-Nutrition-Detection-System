@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card center-card">
+    <h2>Estimating…</h2>
+    <div class="loader">⚙️⚡🔬</div>
+    <p>Processing your image — hang tight! (this may take a few seconds)</p>
+    <script>
+      // short delay to show spinner, then go to results
+      setTimeout(function(){ window.location.href = "{{ url_for('results') }}"; }, 1000);
+    </script>
+  </div>
+{% endblock %}

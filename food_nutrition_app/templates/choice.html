@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <h2>What would you like to do?</h2>
+    <div class="choice-row">
+      <a class="big-btn" href="{{ url_for('dashboard') }}">View Dashboard</a>
+      <a class="big-btn" href="{{ url_for('track') }}">Track Nutrition</a>
+    </div>
+    <a class="back-link" href="{{ url_for('logout') }}">Logout</a>
+  </div>
+{% endblock %}

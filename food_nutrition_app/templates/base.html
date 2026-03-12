@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Food Nutrition App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">🍽️ FoodNutrition</div>
+    {% if session.get('username') %}
+      <div class="nav">
+        <span class="user">Hi, {{ session['username'] }}</span>
+        <a class="btn-min" href="{{ url_for('choice') }}">Home</a>
+        <a class="btn-min" href="{{ url_for('logout') }}">Logout</a>
+      </div>
+    {% endif %}
+  </div>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    © 2025 FoodNutrition
+  </footer>
+</body>
+</html>

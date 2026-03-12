@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc.*
+
+# Virtual environments
+venv/
+env/
+yolo_env/
+.venv/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset
+Dataset/
+food_nutrition_app/uploads/
+
+# Logs
+*.log
+
+# Flask
+instance/
+*.db
+
+# Uploaded images
+uploads/*
+!uploads/.gitkeep
+
+# YOLO training outputs
+runs/
+
+# Large files
+*.pt
+*.whl
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE files
+.vscode/
+.idea/
