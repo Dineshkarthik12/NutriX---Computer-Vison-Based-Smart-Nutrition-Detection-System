@@ -1,6 +1,5 @@
 # Nutritional Values per 100 gm
 # Source: Nutrition5K - Nutritional Database
-
 food_class,calories,protein,fat,carbs,iron,fiber,zinc
 appam,160,3.0,4.0,28.0,0.7,1.0,0.3
 beetroot poriyal,80,2.0,4.0,10.0,0.8,3.0,0.3
